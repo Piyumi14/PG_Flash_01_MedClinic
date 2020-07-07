@@ -92,4 +92,34 @@ public class DBOperation {
             return null;
         } 
     }
-}
+    public boolean updatePatient(Patient p){
+        try {
+            con = (Connection) DriverManager.getConnection(url, username, password);
+            String query = "UPDATE patient SET name='"+p.getName()+"' , age='"+p.getAge()+"' , address='"+p.getAddress()+"' WHERE id="+p.getId();
+            pst = (PreparedStatement) con.prepareStatement(query);
+
+            pst.executeUpdate();
+            
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        } 
+    }
+    
+    public boolean deletePatient(Patient p){
+          try {
+            con = (Connection) DriverManager.getConnection(url, username, password);
+            String query = "DELETE FROM patient WHERE id = " + p.getId();
+            pst = (PreparedStatement) con.prepareStatement(query);
+
+            pst.executeUpdate();
+            
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        } 
+    }
+} 
+    
