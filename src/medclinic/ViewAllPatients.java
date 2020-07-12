@@ -154,7 +154,10 @@ public class ViewAllPatients extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-
+        DeletePatient dp = new DeletePatient();
+        dp.setVisible(true);
+        this.setVisible(false);
+        dp.setFields(pList.get(tblPatients.getSelectedRow()));
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**

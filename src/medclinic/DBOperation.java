@@ -110,7 +110,7 @@ public class DBOperation {
     public boolean deletePatient(Patient p){
           try {
             con = (Connection) DriverManager.getConnection(url, username, password);
-            String query = "DELETE FROM patient WHERE id = " + p.getId();
+            String query = "DELETE FROM patient WHERE id="+p.getId();
             pst = (PreparedStatement) con.prepareStatement(query);
 
             pst.executeUpdate();
