@@ -6,6 +6,7 @@
 package medclinic;
 
 import java.util.ArrayList;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,8 @@ public class ViewAllPatients extends javax.swing.JFrame {
     public ViewAllPatients() {
         initComponents();
         loadPatient();
+        setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
+
     }
 
     DBOperation dbOps = new DBOperation();
@@ -50,6 +53,7 @@ public class ViewAllPatients extends javax.swing.JFrame {
         btnDelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(1000, 1000));
 
         tblPatients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -134,7 +138,7 @@ public class ViewAllPatients extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(243, 243, 243)
                         .addComponent(btnBack)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(403, Short.MAX_VALUE))
         );
 
         pack();
