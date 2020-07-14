@@ -408,13 +408,14 @@ public class NewPatient extends javax.swing.JFrame {
         patient.setExamination(txtExamination.getText());
         patient.setInvestigation(txtInvestigation.getText());
         
-        
-
         boolean result = dbOps.addPatient(patient);
 
         if(result){
             JOptionPane.showMessageDialog(this, "Successfully Saved");
             clearFields();
+            ViewAllPatients vp = new ViewAllPatients();
+            vp.setVisible(true);
+            this.setVisible(false);
         }
         else{
             JOptionPane.showMessageDialog(this, "Error in Inserting");
