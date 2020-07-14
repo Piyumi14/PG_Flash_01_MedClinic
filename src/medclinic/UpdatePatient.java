@@ -428,6 +428,9 @@ public class UpdatePatient extends javax.swing.JFrame {
         if(dbOps.updatePatient(patient)){
             JOptionPane.showMessageDialog(this, "Successfully Updated");
             clearFields();
+            ViewAllPatients vp = new ViewAllPatients();
+            vp.setVisible(true);
+            this.setVisible(false);
         }
         else{
             JOptionPane.showMessageDialog(this, "Error in Updating");

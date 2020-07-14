@@ -412,6 +412,9 @@ public class DeletePatient extends javax.swing.JFrame {
         if (dbOps.deletePatient(this.pt)) {
             JOptionPane.showMessageDialog(this, "Deleted Successfully");
             clearFields();
+            ViewAllPatients vp = new ViewAllPatients();
+            vp.setVisible(true);
+            this.setVisible(false);
         } else {
             JOptionPane.showMessageDialog(this, "Error in Deleting");
         }
