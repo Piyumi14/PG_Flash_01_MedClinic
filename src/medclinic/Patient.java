@@ -11,36 +11,89 @@ package medclinic;
  */
 public class Patient {
     private int id;
-    private String name;
-    private String age;
+    private String fullName;
+    private int age;
+    private String gender;
+    private String nic;
     private String address;
+    private int telephone;
+    private int height;
+    private int weight;
+    private String presentingComplain;
+    private String pastMedicalHistory;
+    private String menstrualHistory;
+    private String allergies;
+    private String examination;
+    private String investigation;
 
     /**
-     * @return the name
+     * @return the id
      */
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
     /**
-     * @param name the name to set
+     * @param id the id to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the fullName
+     */
+    public String getFullName() {
+        return fullName;
+    }
+
+    /**
+     * @param fullName the fullName to set
+     */
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     /**
      * @return the age
      */
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
     /**
      * @param age the age to set
      */
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
+    }
+
+    /**
+     * @return the gender
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * @param gender the gender to set
+     */
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    /**
+     * @return the nic
+     */
+    public String getNic() {
+        return nic;
+    }
+
+    /**
+     * @param nic the nic to set
+     */
+    public void setNic(String nic) {
+        this.nic = nic;
     }
 
     /**
@@ -58,16 +111,131 @@ public class Patient {
     }
 
     /**
-     * @return the id
+     * @return the telephone
      */
-    public int getId() {
-        return id;
+    public int getTelephone() {
+        return telephone;
     }
 
     /**
-     * @param id the id to set
+     * @param telephone the telephone to set
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
     }
+
+    /**
+     * @return the height
+     */
+    public int getHeight() {
+        return height;
+    }
+
+    /**
+     * @param height the height to set
+     */
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    /**
+     * @return the weight
+     */
+    public int getWeight() {
+        return weight;
+    }
+
+    /**
+     * @param weight the weight to set
+     */
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    /**
+     * @return the presentingComplain
+     */
+    public String getPresentingComplain() {
+        return presentingComplain;
+    }
+
+    /**
+     * @param presentingComplain the presentingComplain to set
+     */
+    public void setPresentingComplain(String presentingComplain) {
+        this.presentingComplain = presentingComplain;
+    }
+
+    /**
+     * @return the pastMedicalHistory
+     */
+    public String getPastMedicalHistory() {
+        return pastMedicalHistory;
+    }
+
+    /**
+     * @param pastMedicalHistory the pastMedicalHistory to set
+     */
+    public void setPastMedicalHistory(String pastMedicalHistory) {
+        this.pastMedicalHistory = pastMedicalHistory;
+    }
+
+    /**
+     * @return the menstrualHistory
+     */
+    public String getMenstrualHistory() {
+        return menstrualHistory;
+    }
+
+    /**
+     * @param menstrualHistory the menstrualHistory to set
+     */
+    public void setMenstrualHistory(String menstrualHistory) {
+        this.menstrualHistory = menstrualHistory;
+    }
+
+    /**
+     * @return the allergies
+     */
+    public String getAllergies() {
+        return allergies;
+    }
+
+    /**
+     * @param allergies the allergies to set
+     */
+    public void setAllergies(String allergies) {
+        this.allergies = allergies;
+    }
+
+    /**
+     * @return the examination
+     */
+    public String getExamination() {
+        return examination;
+    }
+
+    /**
+     * @param examination the examination to set
+     */
+    public void setExamination(String examination) {
+        this.examination = examination;
+    }
+
+    /**
+     * @return the investigation
+     */
+    public String getInvestigation() {
+        return investigation;
+    }
+
+    /**
+     * @param investigation the investigation to set
+     */
+    public void setInvestigation(String investigation) {
+        this.investigation = investigation;
+    }
+
+    
+    
 }
