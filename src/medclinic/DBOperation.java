@@ -11,6 +11,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -161,5 +162,36 @@ public class DBOperation {
             return false;
         }
     }
+    
+//    public ArrayList<Patient> SearchPatient(String ValToSearch){
+//        
+//        ArrayList<Patient> patientList = new ArrayList<Patient>();
+//        
+//        Statement st;
+//        ResultSet rs;
+//        
+//         try {
+//            con = (Connection) DriverManager.getConnection(url, username, password);
+//            st = con.createStatement();
+//            String searchQuery = "SELECT * FROM patient WHERE CONCAT('id') LIKE '%"+ValToSearch+"%' ";
+//            rs = st.executeQuery(searchQuery);
+//            
+//            Patient patient;
+//            
+//            while(rs.next()){
+//                patient = new Patient(
+//                        rs.getInt("id")
+//                );
+//                
+//                patientList.add(patient);
+//            }
+//        }catch(Exception ex){
+//                        System.out.println(ex);
+//        }
+//         
+//         return patientList;            
+//    }
+    
+   
 }
     
