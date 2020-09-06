@@ -299,6 +299,8 @@ public class NewPatient extends javax.swing.JFrame {
 
         SaveDetailsBtn.setBackground(new java.awt.Color(51, 153, 0));
         SaveDetailsBtn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        SaveDetailsBtn.setForeground(new java.awt.Color(255, 255, 255));
+        SaveDetailsBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medclinic/tik1.jpg"))); // NOI18N
         SaveDetailsBtn.setText("Save Details");
         SaveDetailsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,7 +339,7 @@ public class NewPatient extends javax.swing.JFrame {
                         .addGap(363, 363, 363))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(SaveDetailsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(270, 270, 270))))
+                        .addGap(269, 269, 269))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

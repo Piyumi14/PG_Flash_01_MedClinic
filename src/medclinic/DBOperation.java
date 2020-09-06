@@ -161,37 +161,6 @@ public class DBOperation {
             System.out.println(e);
             return false;
         }
-    }
-    
-//    public ArrayList<Patient> SearchPatient(String ValToSearch){
-//        
-//        ArrayList<Patient> patientList = new ArrayList<Patient>();
-//        
-//        Statement st;
-//        ResultSet rs;
-//        
-//         try {
-//            con = (Connection) DriverManager.getConnection(url, username, password);
-//            st = con.createStatement();
-//            String searchQuery = "SELECT * FROM patient WHERE CONCAT('id') LIKE '%"+ValToSearch+"%' ";
-//            rs = st.executeQuery(searchQuery);
-//            
-//            Patient patient;
-//            
-//            while(rs.next()){
-//                patient = new Patient(
-//                        rs.getInt("id")
-//                );
-//                
-//                patientList.add(patient);
-//            }
-//        }catch(Exception ex){
-//                        System.out.println(ex);
-//        }
-//         
-//         return patientList;            
-//    }
-    
-   
+    } 
 }
     

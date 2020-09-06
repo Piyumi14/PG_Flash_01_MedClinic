@@ -45,7 +45,6 @@ public class MainDashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 255, 51));
-        setPreferredSize(new java.awt.Dimension(1956, 1030));
         setSize(new java.awt.Dimension(1000, 1000));
         getContentPane().setLayout(null);
 
@@ -140,7 +139,6 @@ public class MainDashboard extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medclinic/MedClinic.png"))); // NOI18N
-        jButton1.setActionCommand("");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setText("GODAGAMA MEDICAL CENTER");
