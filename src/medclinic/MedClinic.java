@@ -16,8 +16,8 @@ public class MedClinic {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MainDashboard md = new MainDashboard();
-        md.setVisible(true);
+        Index in = new Index();
+        in.setVisible(true);
     }
     
 }

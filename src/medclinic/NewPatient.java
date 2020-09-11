@@ -239,7 +239,7 @@ public class NewPatient extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(177, 212, 212));
@@ -339,7 +339,7 @@ public class NewPatient extends javax.swing.JFrame {
                         .addGap(363, 363, 363))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(SaveDetailsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(269, 269, 269))))
+                        .addGap(270, 270, 270))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -371,8 +371,8 @@ public class NewPatient extends javax.swing.JFrame {
                     .addComponent(jScrollPane6)
                     .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SaveDetailsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
-                .addGap(9, 9, 9))
+                .addComponent(SaveDetailsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
@@ -462,12 +462,12 @@ public class NewPatient extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 8, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 12, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -500,13 +500,13 @@ public class NewPatient extends javax.swing.JFrame {
         Patient patient = new Patient();
         patient.setId(0);
         patient.setFullName(txtFullName.getText());
-        patient.setAge(Integer.parseInt(txtAge.getText()));
+        patient.setAge(txtAge.getText());
         patient.setGender(txtGender.getText());
         patient.setNic(txtNic.getText());
         patient.setAddress(txtAddress.getText());
-        patient.setTelephone(Integer.parseInt(txtTelephone.getText()));
-        patient.setHeight(Integer.parseInt(txtHeight.getText()));
-        patient.setWeight(Integer.parseInt(txtWeight.getText()));
+        patient.setTelephone(txtTelephone.getText());
+        patient.setHeight(txtHeight.getText());
+        patient.setWeight(txtWeight.getText());
         patient.setPresentingComplain(txtPC.getText());
         patient.setPastMedicalHistory(txtPMH.getText());
         patient.setMenstrualHistory(txtMH.getText());
@@ -514,7 +514,15 @@ public class NewPatient extends javax.swing.JFrame {
         patient.setExamination(txtExamination.getText());
         patient.setInvestigation(txtInvestigation.getText());
         
-        boolean result = dbOps.addPatient(patient);
+        if(txtFullName.getText().isEmpty() || txtAge.getText().isEmpty() || txtTelephone.getText().isEmpty()
+                || txtPC.getText().isEmpty() || txtPMH.getText().isEmpty() || txtMH.getText().isEmpty() || txtallergies.getText().isEmpty()
+                || txtExamination.getText().isEmpty() || txtInvestigation.getText().isEmpty()){
+            
+                         JOptionPane.showMessageDialog(this, "Please fill all the fields");
+
+        }else{
+            
+             boolean result = dbOps.addPatient(patient);
 
         if(result){
             JOptionPane.showMessageDialog(this, "Successfully Saved");
@@ -526,6 +534,9 @@ public class NewPatient extends javax.swing.JFrame {
         else{
             JOptionPane.showMessageDialog(this, "Error in Inserting");
         }
+        }
+        
+       
     }//GEN-LAST:event_SaveDetailsBtnActionPerformed
 
     private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
@@ -542,7 +553,7 @@ public class NewPatient extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MainDashboard md =  new MainDashboard();
+        MainDashboard1 md =  new MainDashboard1();
         md.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed

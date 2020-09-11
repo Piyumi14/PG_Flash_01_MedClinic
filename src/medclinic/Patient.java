@@ -12,13 +12,13 @@ package medclinic;
 public class Patient {
     private int id;
     private String fullName;
-    private int age;
+    private String age;
     private String gender;
     private String nic;
     private String address;
-    private int telephone;
-    private int height;
-    private int weight;
+    private String telephone;
+    private String height;
+    private String weight;
     private String presentingComplain;
     private String pastMedicalHistory;
     private String menstrualHistory;
@@ -57,14 +57,14 @@ public class Patient {
     /**
      * @return the age
      */
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
     /**
      * @param age the age to set
      */
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -113,42 +113,42 @@ public class Patient {
     /**
      * @return the telephone
      */
-    public int getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
     /**
      * @param telephone the telephone to set
      */
-    public void setTelephone(int telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 
     /**
      * @return the height
      */
-    public int getHeight() {
+    public String getHeight() {
         return height;
     }
 
     /**
      * @param height the height to set
      */
-    public void setHeight(int height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
     /**
      * @return the weight
      */
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
     /**
      * @param weight the weight to set
      */
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 

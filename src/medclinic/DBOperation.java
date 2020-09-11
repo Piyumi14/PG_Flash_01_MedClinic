@@ -37,13 +37,13 @@ public class DBOperation {
 
             pst.setInt(1, p.getId());
             pst.setString(2, p.getFullName());
-            pst.setInt(3, p.getAge());
+            pst.setString(3, p.getAge());
             pst.setString(4, p.getGender());
             pst.setString(5, p.getNic());
             pst.setString(6, p.getAddress());
-            pst.setInt(7, p.getTelephone());
-            pst.setInt(8, p.getHeight());
-            pst.setInt(9, p.getWeight());
+            pst.setString(7, p.getTelephone());
+            pst.setString(8, p.getHeight());
+            pst.setString(9, p.getWeight());
             pst.setString(10, p.getPresentingComplain());
             pst.setString(11, p.getPastMedicalHistory());
             pst.setString(12, p.getMenstrualHistory());
@@ -93,13 +93,13 @@ public class DBOperation {
                 Patient p = new Patient();
                 p.setId(rs.getInt(1));
                 p.setFullName(rs.getString(2));
-                p.setAge(rs.getInt(3));
+                p.setAge(rs.getString(3));
                 p.setGender(rs.getString(4));
                 p.setNic(rs.getString(5));
                 p.setAddress(rs.getString(6));
-                p.setTelephone(rs.getInt(7));
-                p.setHeight(rs.getInt(8));
-                p.setWeight(rs.getInt(9));
+                p.setTelephone(rs.getString(7));
+                p.setHeight(rs.getString(8));
+                p.setWeight(rs.getString(9));
                 p.setPresentingComplain(rs.getString(10));
                 p.setPastMedicalHistory(rs.getString(11));
                 p.setMenstrualHistory(rs.getString(12));

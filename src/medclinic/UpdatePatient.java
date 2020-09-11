@@ -520,13 +520,13 @@ public class UpdatePatient extends javax.swing.JFrame {
         Patient patient = new Patient();
         patient.setId(new Integer(txtID.getText()).intValue());
         patient.setFullName(txtFullName.getText());
-        patient.setAge(new Integer(txtAge.getText()).intValue());
+        patient.setAge(txtAge.getText());
         patient.setGender(txtGender.getText());
         patient.setNic(txtNic.getText());
         patient.setAddress(txtAddress.getText());
-        patient.setTelephone(new Integer(txtTelephone.getText()).intValue());
-        patient.setHeight(new Integer(txtHeight.getText()).intValue());
-        patient.setWeight(new Integer(txtWeight.getText()).intValue());
+        patient.setTelephone(txtTelephone.getText());
+        patient.setHeight(txtHeight.getText());
+        patient.setWeight(txtWeight.getText());
         patient.setPresentingComplain(txtPC1.getText());
         patient.setPastMedicalHistory(txtPMH1.getText());
         patient.setMenstrualHistory(txtMH1.getText());

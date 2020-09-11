@@ -110,7 +110,7 @@ public class MainDashboard extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 134, 1960, 740);
+        jPanel1.setBounds(0, 140, 1960, 740);
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
