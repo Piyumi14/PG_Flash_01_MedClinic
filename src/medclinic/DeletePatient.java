@@ -30,13 +30,13 @@ public class DeletePatient extends javax.swing.JFrame {
         pt = patient;
         txtID.setText(new Integer(patient.getId()).toString());
         txtFullName.setText(patient.getFullName());
-        txtAge.setText(new Integer(patient.getAge()).toString());
+        txtAge.setText(patient.getAge());
         txtGender.setText(patient.getGender());
         txtNic.setText(patient.getNic());
         txtAddress.setText(patient.getAddress());
-        txtTelephone.setText(new Integer(patient.getTelephone()).toString());
-        txtHeight.setText(new Integer(patient.getHeight()).toString());
-        txtWeight.setText(new Integer(patient.getWeight()).toString());
+        txtTelephone.setText(patient.getTelephone());
+        txtHeight.setText(patient.getHeight());
+        txtWeight.setText(patient.getWeight());
         txtPC.setText(patient.getPresentingComplain());
         txtPMH.setText(patient.getPastMedicalHistory());
         txtMH.setText(patient.getMenstrualHistory());
@@ -103,7 +103,6 @@ public class DeletePatient extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1956, 1030));
         setSize(new java.awt.Dimension(1000, 1000));
 
         jPanel2.setBackground(new java.awt.Color(177, 212, 212));
@@ -306,6 +305,7 @@ public class DeletePatient extends javax.swing.JFrame {
         txtHeight.setEditable(false);
         txtHeight.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        txtWeight.setEditable(false);
         txtWeight.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -453,7 +453,8 @@ public class DeletePatient extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel20.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medclinic/PG Flash.png"))); // NOI18N
         jLabel20.setText("Software By : PG FLASH");
 
@@ -485,7 +486,7 @@ public class DeletePatient extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

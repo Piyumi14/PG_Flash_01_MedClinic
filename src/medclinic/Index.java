@@ -57,7 +57,8 @@ public class Index extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel7.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medclinic/PG Flash.png"))); // NOI18N
         jLabel7.setText("Software By : PG FLASH");
 

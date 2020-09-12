@@ -29,13 +29,13 @@ public class UpdatePatient extends javax.swing.JFrame {
     void setFields(Patient patient){
         txtID.setText(new Integer(patient.getId()).toString());
         txtFullName.setText(patient.getFullName());
-        txtAge.setText(new Integer(patient.getAge()).toString());
+        txtAge.setText(patient.getAge());
         txtGender.setText(patient.getGender());
         txtNic.setText(patient.getNic());
         txtAddress.setText(patient.getAddress());
-        txtTelephone.setText(new Integer(patient.getTelephone()).toString());
-        txtHeight.setText(new Integer(patient.getHeight()).toString());
-        txtWeight.setText(new Integer(patient.getWeight()).toString());
+        txtTelephone.setText(patient.getTelephone());
+        txtHeight.setText(patient.getHeight());
+        txtWeight.setText(patient.getWeight());
         txtPC1.setText(patient.getPresentingComplain());
         txtPMH1.setText(patient.getPastMedicalHistory());
         txtMH1.setText(patient.getMenstrualHistory());
@@ -462,7 +462,8 @@ public class UpdatePatient extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel27.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medclinic/PG Flash.png"))); // NOI18N
         jLabel27.setText("Software By : PG FLASH");
 
